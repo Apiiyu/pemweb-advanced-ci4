@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Protal Berita Codeigniter</title>
 
-	<!-- Bootstrap CSS -->
+	<!-- Bootstrap CSS (Rafi Khoirulloh - 41122100074) -->
 	<link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
 </head>
 
@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-4">
                 <?= $this->include('partials/sidebar') ?>
-            </div>
+            </div>  
         </div>
     </div>
 
