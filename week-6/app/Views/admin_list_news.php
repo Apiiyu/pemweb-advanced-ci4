@@ -2,6 +2,16 @@
 
 <?= $this->section('content') ?>
 
+<!-- Success Message -->
+<?php if (session()->getFlashdata('success')): ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="fas fa-check-circle"></i> <?= session()->getFlashdata('success') ?>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<?php endif; ?>
+
 <table class="table">
 <thead>
 <tr>
@@ -56,6 +66,11 @@ function confirmToDelete(el){
     $("#delete-button").attr("href", el.dataset.href);
     $("#confirm-dialog").modal('show');
 }
+
+// Auto dismiss alerts after 5 seconds
+setTimeout(function() {
+    $('.alert').fadeOut('slow');
+}, 5000);
 </script>
 
 
